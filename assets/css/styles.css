@@ -304,3 +304,11 @@ nav ul li {
     height: 2rem;
 }
 
+/*=============== SOCIAL NETWORKS ================*/
+
+footer {
+    background-color: var(--bg-color);
+    padding: 1.25rem;
+    text-align: center;
+    margin: 2rem 0 0;
+}
