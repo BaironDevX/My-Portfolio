@@ -304,13 +304,27 @@ nav ul li {
     height: 2rem;
 }
 
-/*=============== SOCIAL NETWORKS ================*/
+/*=============== FOOTER ================*/
 
 footer {
     background-color: var(--bg-color);
     padding: 1.25rem;
     text-align: center;
     margin: 2rem 0 0;
+}
+
+/*=============== ARROW TO SCROLL UP =============== */
+
+.scroll-up {
+    position: fixed;
+    right: 0.5%;
+    bottom: 3%;
+    cursor: pointer;
+}
+
+.up-arrow {
+    width: 3rem;
+    height: 3rem;
 }
 
 /*=============== RESPONSIVE WEB DESIGN 720px ================*/
