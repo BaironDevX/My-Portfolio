@@ -313,7 +313,7 @@ footer {
     margin: 2rem 0 0;
 }
 
-/*=============== RESPONSIVE WEB DESIGN ================*/
+/*=============== RESPONSIVE WEB DESIGN 720px ================*/
 
 @media screen and (max-width: 720px) {
 
@@ -401,5 +401,22 @@ footer {
 
     .contact-form-container {
         max-width: 23.75rem;
+    }
+}
+
+/*=============== RESPONSIVE WEB DESIGN 420px ================*/
+
+@media screen and (max-width: 420px) {
+    .hero img {
+        height: 37.5rem;
+        width: 23rem;
+    }
+
+    .bio {
+        width: 18.3rem;
+    }
+
+    .contact-form-container {
+        max-width: 17.75rem;
     }
 }
