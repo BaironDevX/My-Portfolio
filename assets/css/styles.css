@@ -65,7 +65,7 @@ nav {
 }
 
 nav h1 {
-    color: var(--primary-color)
+    color: var(--primary-color);
 }
 
 nav a {
