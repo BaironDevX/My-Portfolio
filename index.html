@@ -10,8 +10,8 @@
     <!--=============== CSS STYLES ===============-->
     <link rel="stylesheet" href="assets/css/styles.css">
 
-    <!--=============== REMIX ICONS ===============-->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
+     <!--==================== UNICONS ====================-->
+     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 
     <!--=============== FAVICONS ===============-->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
@@ -28,17 +28,39 @@
 <body>
     <main>
         <!--=============== START NAVBAR ===============-->
-        <nav id="nabvar">
-            <h1>BaironDevX</h1>
-            <ul class="nav-list">
-                <li><a href="#about-me" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <button class="burger-menu" id="burger-menu">
-                <ion-icon class="barras" name="menu-outline"></ion-icon>
-            </button>
+        <nav id="navbar">
+            <a href="#" id="nav__logo"><h1>BaironDevX</h1></a>
+
+            <div id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#about-me">
+                            <i class="uil uil-user nav__icon nav-link"> About Me</i>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#skills">
+                            <i class="uil uil-arrow" nav__icon nav-link> Skills</i>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#projects">
+                            <i class="uil uil-bag nav__icon nav-link"> Projects</i>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">
+                            <i class="uil uil-envelope nav__icon nav-link"> Contact</i>
+                        </a>
+                    </li>
+                </ul>
+                <button class="burger-menu" id="burger-menu">
+                    <i class="uil uil-bars"></i>
+                </button>
+            </div>
         </nav>
         <!--=============== END NAVBAR ===============-->
 
@@ -52,27 +74,16 @@
             />
             <div class="bio animate__animated animate__shakeX"> <!--Animate about me text-->
                 <h2 class="bio-title">About Me</h2>
-                <p class="bio-text">I am a Systems Engineer and I am passionate about everything related to technology and programming, and I like to keep up to date with the latest trends and tools in the sector.
+                <p class="bio-text">
+                    About me
+                    I am a Systems Engineer and I am passionate about everything related to technology and programming, and I like to keep up to date with the latest trends and tools in the sector. I focus on Web Development with the goal of being a Full Stack programmer. My goal is to create digital products that are functional, innovative and attractive to users. I am a self-taught person and I am always constantly learning about the new technologies that appear. If you have a great idea in mind and want to make it come true, you can <a href="#contact">contact</a> me.
                 </p>
             </div>
         </section>
 
-        <!--=============== ABOUT ME ===============-->
-        <section class="more-about">
-            <h2>More about me</h2>
-            <p>
-                I focus on Web Development with the goal of being a Full Stack programmer. My goal is to create digital products that are functional, innovative and attractive to users. 
-            </p>
-            <p>
-                I am a self-taught person and I am always constantly learning about the new technologies that appear.
-            </p>
-            <p>
-                If you want to know more about me or want to work with me, you can <a href="#contact">contact me</a>.
-            </p>
-        </section>
         <!--=============== SKILLS ===============-->
         <section class="skills" id="skills">
-            <h2 class="header-skills">My Top Skills</h2>
+            <h2 class="skill-header">My Top Skills</h2>
 
             <div class="skills-container">
                 <div class="first-set animate__animated animate__pulse">
@@ -128,13 +139,11 @@
                     class="project-pic"
                     />
 
-                    <h3 class="project-title">Electric service management system</h3>
+                    <h3 class="project-title">Electric Service Management System</h3>
                     <p class="project-details">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
-                        ratione vel inventore labore commodi modi quos culpa aut saepe!
-                        Alias!
+                        System with various tools that allow the control of reports of electrical failures in the region
                     </p>
-                    <a href="https://sugec-ced.netlify.app/" target="_blank" class="project-link">Check it Out</a>
+                    <a href="https://sugec-ced.netlify.app/" target="_blank" class="project-link btn-card">Check it out</a>
 
                 </div>
 
@@ -148,9 +157,7 @@
 
                     <h3 class="project-title">Customer Satisfaction Survey</h3>
                     <p class="project-details">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
-                        ratione vel inventore labore commodi modi quos culpa aut saepe!
-                        Alias!
+                        A simple form for customer satisfaction in a restaurant
                     </p>
                     <a href="#" target="_blank" class="project-link">Check it Out</a>
                 </div>
@@ -165,15 +172,21 @@
 
                     <h3 class="project-title">CodeConnect Landing Page</h3>
                     <p class="project-details">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
-                        ratione vel inventore labore commodi modi quos culpa aut saepe!
-                        Alias!
+                        An example course landing page
                     </p>
                     <a href="#" target="_blank" class="project-link">Check it Out</a>
                 </div>
             </div>
         </section>
 
+        <!--==================== START NOW ====================-->
+        <section id="hero-idea">
+            <div class="hero-idea-header">
+                <h2>Do you have any idea in mind?</h2>
+                <p>So let's work on it</p>
+                <a href="#contact" class="btn">Contact Me</a>
+            </div>
+        </section>
         <!--=============== CONTACT ===============-->
         <section class="contact" id="contact">
             <h2>Contact Me</h2>

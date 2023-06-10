@@ -1,17 +1,18 @@
 /*=============== GOOGLE FONTS ================*/
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
 /*=============== VARIABLES ================*/
 
 :root {
-    --font-family: "Roboto", sans-serif;
+    --font-family: Poppins, sans-serif;
+    --font-size-title: 2rem;
     --normal-font: 400;
     --bold-font: 700;
     --bolder-font: 900;
     --bg-color: #fcfcfc;
-    --primary-color: #4756df;
-    --secondary-color: #ff7235;
+    --primary-color: black;
+    --secondary-color: #4756df;
     --primary-shadow: #8b8eaf;
     --secondary-shadow: #a17a69;
     --bottom-margin: 0.5rem;
@@ -38,11 +39,11 @@ ul {
 
 a {
     text-decoration: none;
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 a:hover {
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 body {
@@ -51,7 +52,7 @@ body {
 
 /*=============== NAVBAR ================*/
 
-nav {
+#navbar {
     position: sticky;
     top: 0;
     left: 0;
@@ -64,31 +65,37 @@ nav {
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
 
-nav h1 {
+#nav__logo {
     color: var(--primary-color);
+    font-size: 1.3rem;
 }
 
-nav a {
-    color: var(--primary-color);
+#navbar a {
+    color: var(--secondary-color);
     transition: var(--transition);
 }
 
-nav a:hover {
-    color: var(--secondary-color);
-    border-bottom: 2px solid var(--secondary-color);
+#navbar a:hover, #nav__logo:hover{
+    color: var(--primary-color)
 }
 
-nav ul {
+.nav-list {
     display: flex;
     gap: 1.9rem;
 }
 
-nav ul li {
+.nav-list li {
     font-weight: var(--bold-font);
+    font-size: 1.1rem;
 }
 
+.nav-list i {
+    font-style: normal;
+}
+
+
 .burger-menu {
-    color: var(--primary-color);
+    color: var(--secondary-color);
     font-size: 2rem;
     border: 0;
     background-color: transparent;
@@ -108,41 +115,24 @@ nav ul li {
 }
 
 .hero img {
-    height: 25rem;
-    width: 25rem;
+    height: 28rem;
+    width: 28rem;
 }
 
 .bio {
-    width: 25rem;
+    width: 35rem;
     padding: 0.625rem;
     border-radius: 6px;
     box-shadow: 0px 2px 15px 2px var(--primary-shadow);
 }
 
-.bio h1 {
-    margin-bottom: var(--bottom-margin);
+.bio h2 {
+    text-align: center;
 }
 
 .bio p {
     line-height: var(--line-height);
     padding: 0.3rem 0;
-}
-
-/*=============== MORE ABOUT ================*/
-
-.more-about {
-    background-color: var(--bg-color);
-    padding: 1rem 6rem;
-}
-
-.more-about h2{
-    margin-bottom: var(--bottom-margin);
-    text-align: center;
-}
-
-.more-about p {
-    line-height: var(--line-height);
-    padding: 0.4rem;
 }
 
 /*=============== SKILLS ================*/
@@ -156,7 +146,13 @@ nav ul li {
 
 .skill-header {
     margin-bottom: 1rem;
+    font-size: var(--font-size-title);
 }
+
+.skills-container {
+}
+
+
 
 .skills-container img {
     padding: 1.25rem;
@@ -173,6 +169,12 @@ nav ul li {
     box-shadow: 0 3px 10px var(--secondary-shadow);
     padding: 20px;
     margin: 10px;
+    transition: transform 0.3s ease-out;
+    cursor: pointer;
+}
+
+.icon-card:hover {
+    transform: scale(1.1);
 }
 
 /*=============== PROJECTS ================*/
@@ -300,8 +302,13 @@ nav ul li {
 }
 
 .socicon {
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
+    transition: transform 0.3s ease-out;
+}
+
+.socicon:hover {
+    transform: scale(1.3);
 }
 
 /*=============== FOOTER ================*/
