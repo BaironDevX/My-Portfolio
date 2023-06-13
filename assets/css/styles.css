@@ -60,7 +60,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.5rem 3.5rem;
+    padding: 1.2rem 3.5rem;
     background-color: var(--bg-color);
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
@@ -112,15 +112,16 @@ body {
     gap: 2.5rem;
     max-width: 68.5rem;
     margin: auto;
+    padding-top: 3rem;
 }
 
 .hero img {
-    height: 28rem;
-    width: 28rem;
+    height: 30rem;
+    width: 30rem;
 }
 
 .bio {
-    width: 35rem;
+    width: 40rem;
     padding: 0.625rem;
     border-radius: 6px;
     box-shadow: 0px 2px 15px 2px var(--primary-shadow);
@@ -142,6 +143,7 @@ body {
     margin: auto;
     text-align: center;
     margin-top: 2.5rem;
+    padding-top: 7rem;
 }
 
 #skill-header {
@@ -178,6 +180,7 @@ body {
     background-color: var(--bg-color);
     padding: 32px 0;
     margin-top: 2rem;
+    padding-top: 6rem;
 }
 
 #projects-title {
@@ -188,7 +191,7 @@ body {
 
 #projects-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
 }
 
@@ -266,7 +269,7 @@ body {
     align-items: center;
     text-align: center;
     width: 100%;
-    /* height: 80vh; */
+    padding-top: 6rem;
 }
 
 #hero-idea-header h2 {
@@ -277,23 +280,6 @@ body {
     font-size: 1.5rem;
     color: gray;
 }
-
-#hero-idea-header .btn {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: #3649f5;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 6px;
-    transition: background-color 0.3s ease-out, transform 0.5s ease-out;
-}
-
-#hero-idea-header .btn:hover {
-    background-color: #2a3aaf;
-    transform: scale(1.1);
-}
-
 
 
 /*=============== CONTACT ================*/
@@ -397,7 +383,7 @@ footer p {
 
 /*=============== ARROW TO SCROLL UP =============== */
 
-.scroll-up {
+#scroll-up {
     position: fixed;
     right: 0.5%;
     bottom: 3%;
@@ -419,19 +405,23 @@ footer p {
         padding: 1.5rem 1rem;
     }
 
+    #navbar #nav__logo {
+        font-size: 1rem;
+    }
+
     nav ul {
         position: fixed;
         background-color: var(--bg-color);
         flex-direction: column;
-        top: 86px;
-        left: 10%;
-        width: 80%;
+        top: 73px;
+        left: 0;
+        width: 100%;
         text-align: center;
         transform: translateX(120%);
-        transition: transform 0.5s ease-in;
+        transition: transform 0.5s ease-out;
     }
 
-    nav ul li {
+    #navbar ul li {
         margin: 8px;
     }
 
@@ -452,8 +442,7 @@ footer p {
     }
 
     .hero img {
-        height: 37.5rem;
-        width: 30rem;
+       max-width: 100%;
     }
 
     .bio {
@@ -461,19 +450,28 @@ footer p {
         width: 20.5rem;
     }
 
-    /*=============== MORE ABOUT ME ================*/
+    /*=============== SOCIAL NETWORKS ================*/
 
-    .more-about {
-        margin-top: 2rem;
-        padding: 1rem 3.5rem;
+    .socials {
+        position: absolute;
+        flex-direction: row;
+        right: 21%;
+        top: 17%;
+        /* display: none; */
     }
 
-    .more-about h2 {
-        text-align: center;
+    .socicon {
+        width: 3rem;
+        height: 3rem;
+        transition: transform 0.3s ease-out;
     }
 
-    .more-about p {
-        text-align: justify;
+    .socicon:hover {
+        transform: scale(1.3);
+    }
+
+    #scroll-up {
+        display: none;
     }
 
     /*=============== SKILLS ================*/
@@ -485,12 +483,15 @@ footer p {
 
     /*=============== PROJECTS ================*/
 
-    .projects-container {
-        flex-direction: column;
+    #projects-container {
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 100%;
     }
 
-    .project-container {
-        width: 20.875rem;
+    /*=============== HERO IDEA ================*/
+
+    #hero-idea h2 {
+        font-size: 2.5rem;
     }
 
     /*=============== CONTACT FORM ================*/
@@ -500,19 +501,3 @@ footer p {
     }
 }
 
-/*=============== RESPONSIVE WEB DESIGN 420px ================*/
-
-@media screen and (max-width: 420px) {
-    .hero img {
-        height: 37.5rem;
-        width: 23rem;
-    }
-
-    .bio {
-        width: 18.3rem;
-    }
-
-    .contact-form-container {
-        max-width: 17.75rem;
-    }
-}
